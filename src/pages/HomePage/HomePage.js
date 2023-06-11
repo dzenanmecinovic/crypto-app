@@ -27,7 +27,6 @@ const HomePage = () => {
           </a>
         </div>
       </div>
-      <h1>rad</h1>
     </>
   );
 };
