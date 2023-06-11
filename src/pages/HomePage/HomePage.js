@@ -10,20 +10,13 @@ const HomePage = () => {
       </video>
       <div className="homePage">
         <div>
-          <h1 id="naslov">The World's Largest Crypto Platform</h1>
+          <h1 id="naslov">
+            The World's Largest Crypto Currency <br></br>Platform
+          </h1>
         </div>
         <div className="homepageContent">
           <a href="/prices">
-            <button
-              id="getStarted"
-              onClick={window.scrollTo({
-                top: 100,
-                left: 0,
-                behavior: "smooth",
-              })}
-            >
-              Get Started
-            </button>
+            <button id="getStarted">Get Started</button>
           </a>
         </div>
       </div>
