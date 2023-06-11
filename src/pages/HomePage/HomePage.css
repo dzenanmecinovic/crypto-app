@@ -1,0 +1,49 @@
+.homePage {
+  /* margin-top: 7rem; */
+  min-height: 85vh;
+  width: 100vw;
+}
+
+#backgroundVideo {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  z-index: -10;
+  position: fixed;
+  user-select: none;
+  filter: brightness(25%);
+}
+
+#getStarted {
+  position: relative;
+  width: 20vw;
+  height: 8vh;
+  border-radius: 50px;
+  background-color: var(--second);
+  color: white;
+  font-weight: 900;
+  font-size: 1.5rem;
+  transition: 0.6s;
+}
+
+#getStarted:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.homepageContent {
+  height: 40vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#naslov {
+  color: var(--main);
+  text-align: center;
+  padding-top: 6rem;
+  font-size: 3.5rem;
+  font-family: Arial, sans-serif;
+}
