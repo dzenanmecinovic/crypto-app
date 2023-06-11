@@ -1,0 +1,6 @@
+.pricesPage {
+  height: 90vh;
+  width: 100vw;
+  background: url(../../assets/pixelscott.jpg);
+  overflow: hidden;
+}
