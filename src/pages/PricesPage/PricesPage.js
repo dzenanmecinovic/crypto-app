@@ -34,15 +34,9 @@ export default function PricesPage() {
     }
   };
 
-  useEffect(() => {
-    if (data === null) {
-      setTimeout(() => {
-        fetchData();
-      }, 4000);
-    }
-  }, [data]);
-  const mapiranje = data.coins;
-  const mapa = mapiranje.slice(0, 15);
+  setTimeout(() => {
+    fetchData();
+  }, 1000);
 
   return (
     <div className="pricesPage">
