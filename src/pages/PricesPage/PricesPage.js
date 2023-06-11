@@ -34,13 +34,14 @@ export default function PricesPage() {
     }
   };
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (data === null) {
       setTimeout(() => {
         fetchData();
-      }, 4000);
+      }, 1000);
     }
   }, [data]);
+
   const mapiranje = data.coins;
   const mapa = mapiranje.slice(0, 15);
 
