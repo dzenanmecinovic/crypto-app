@@ -1,0 +1,25 @@
+.prices {
+  position: relative;
+  right: 6.3vw;
+  line-height: 1rem;
+}
+
+.contentCoin {
+  font-size: 1.5rem;
+}
+
+.contentCoin span {
+  position: relative;
+  bottom: 7px;
+  left: 10px;
+}
+
+#icon {
+  width: 2vw;
+}
+
+.cene {
+  position: relative;
+  left: 17vw;
+  bottom: 2vh;
+}
