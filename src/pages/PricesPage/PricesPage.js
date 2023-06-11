@@ -16,7 +16,7 @@ export default function PricesPage() {
         "tiers[0]": "1",
         orderBy: "marketCap",
         orderDirection: "desc",
-        limit: "50",
+        limit: "15",
         offset: "0",
       },
       headers: {
@@ -27,22 +27,16 @@ export default function PricesPage() {
 
     try {
       const response = await axios.request(options);
-      setData(response.data.data);
-      console.log(response.data.data);
+      setData(response.data.data.coins);
+      console.log(response.data.data.coins);
     } catch (error) {
       console.error(error);
     }
   };
 
-  useEffect(() => {
-    if (data === null) {
-      setTimeout(() => {
-        fetchData();
-      }, 4000);
-    }
-  }, [data]);
-  const mapiranje = data.coins;
-  const mapa = mapiranje.slice(0, 15);
+  setTimeout(() => {
+    fetchData();
+  }, 1000);
 
   return (
     <div className="pricesPage">
@@ -50,8 +44,15 @@ export default function PricesPage() {
         <p>Loading...</p>
       ) : (
         <p>
-          {mapa.map((coin) => {
-            return <Price key={coin.UUID} name={coin.name} />;
+          {data.map((coin) => {
+            return (
+              <Price
+                key={coin.UUID}
+                iconUrl={coin.iconUrl}
+                name={coin.name}
+                price={coin.price}
+              />
+            );
           })}
         </p>
       )}

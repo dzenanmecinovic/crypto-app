@@ -4,3 +4,9 @@
   background: url(../../assets/pixelscott.jpg);
   overflow: hidden;
 }
+
+.pricesPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
