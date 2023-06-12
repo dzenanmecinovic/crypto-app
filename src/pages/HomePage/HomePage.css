@@ -5,7 +5,7 @@
   z-index: -10;
   position: fixed;
   user-select: none;
-  filter: brightness(10%);
+  filter: brightness(20%);
 }
 
 #getStarted {
