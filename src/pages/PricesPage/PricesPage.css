@@ -3,10 +3,13 @@
   width: 100vw;
   background: url(../../assets/pixelscott.jpg);
   overflow: hidden;
-}
-
-.pricesPage {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#favorite {
+  position: relative;
+  bottom: 1vh;
+  left: 2vw;
 }

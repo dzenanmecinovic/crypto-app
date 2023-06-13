@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Price.css";
 
-export default function Price({ UUID, iconUrl, name, price, toggleFavorite }) {
+export default function Price({ data, UUID, iconUrl, name, price }) {
+  const [favorite, setFavorite] = useState(false);
+  const [favCoins, setFavCoins] = useState([]);
+  const toggleFavorite = (UUID) => {
+    if (data.filter((coin) => coin.UUID === UUID)) {
+      setFavorite(true);
+    } else {
+      setFavorite(false);
+    }
+  };
   return (
     <div className="prices">
       <div className="contentCoin">
@@ -9,7 +18,9 @@ export default function Price({ UUID, iconUrl, name, price, toggleFavorite }) {
         <span>{name}</span>
         <div className="cene">
           <span className="price">{price.slice(0, 10)}</span>
-          <button onClick={() => toggleFavorite(UUID)}>💗</button>
+          <button id="favorite" onClick={() => toggleFavorite(UUID)}>
+            💗
+          </button>
         </div>
       </div>
     </div>

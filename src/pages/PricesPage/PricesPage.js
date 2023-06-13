@@ -16,7 +16,7 @@ export default function PricesPage() {
         "tiers[0]": "1",
         orderBy: "marketCap",
         orderDirection: "desc",
-        limit: "10",
+        limit: "15",
         offset: "0",
       },
       headers: {
