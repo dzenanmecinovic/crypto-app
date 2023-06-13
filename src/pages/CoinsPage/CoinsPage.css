@@ -1,0 +1,12 @@
+.coinsPage {
+  height: 90vh;
+  width: 100vw;
+  background: url(../../assets/pixelscott.jpg);
+  overflow: hidden;
+}
+
+.coinsPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
