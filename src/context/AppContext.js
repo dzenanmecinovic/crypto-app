@@ -3,19 +3,12 @@ import React, { createContext, useState } from "react";
 const AppContext = createContext();
 
 function ContextProvider({ children }) {
-
-    const [favorite, setFavorite]=useState(false);
-    
-    const toggleFavorite= (UUID) => {
-        if(data.filter(coin) => coin.UUID === UUID) {
-            setFavorite(true);
-        } else {
-            setFavorite(false);
-        }
-    }
+  const [fav, setFav] = useState(false);
+  const [favCoins] = useState([]);
   const values = {
-    favorite,
-    setFavorite,
+    fav,
+    setFav,
+    favCoins,
   };
   return <AppContext.Provider value={values}>{children}</AppContext.Provider>;
 }

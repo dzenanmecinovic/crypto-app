@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import "./Price.css";
+import { AppContext } from "../../../context/AppContext";
 
-export default function Price({ data, UUID, iconUrl, name, price }) {
-  const [favorite, setFavorite] = useState(false);
-  const [favCoins, setFavCoins] = useState([]);
+export default function Price({ UUID, iconUrl, name, price }) {
+  const { setFav, favCoins } = useContext(AppContext);
   const toggleFavorite = (UUID) => {
-    if (data.filter((coin) => coin.UUID === UUID)) {
-      setFavorite(true);
+    if (this.UUID === UUID) {
+      setFav(true);
+      favCoins.push(this);
     } else {
-      setFavorite(false);
+      setFav(false);
     }
   };
   return (

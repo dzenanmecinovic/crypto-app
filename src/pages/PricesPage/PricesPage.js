@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Price from "../../components/Navbar/Price/Price";
 import "./PricesPage.css";
 import axios from "axios";
@@ -28,7 +28,6 @@ export default function PricesPage() {
     try {
       const response = await axios.request(options);
       setData(response.data.data.coins);
-      console.log(response.data.data.coins);
     } catch (error) {
       console.error(error);
     }
@@ -41,7 +40,7 @@ export default function PricesPage() {
   return (
     <div className="pricesPage">
       {data === null ? (
-        <p>Loading...</p>
+        <p id="loading">Loading...</p>
       ) : (
         <p>
           {data.map((coin) => {
@@ -51,6 +50,7 @@ export default function PricesPage() {
                 iconUrl={coin.iconUrl}
                 name={coin.name}
                 price={coin.price}
+                toggleFavorite={coin.toggleFavorite}
               />
             );
           })}
