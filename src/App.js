@@ -3,6 +3,8 @@ import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import HomePage from "./pages/HomePage/HomePage";
 import PricesPage from "./pages/PricesPage/PricesPage";
+import Price from "./components/Navbar/Price/Price";
+import Footer from "./components/Footer/Footer";
 import CoinsPage from "./pages/CoinsPage/CoinsPage";
 
 function App() {
@@ -14,6 +16,7 @@ function App() {
         <Route path="/prices" element={<PricesPage />}></Route>
         <Route path="/coins" element={<CoinsPage />}></Route>
       </Routes>
+      <Footer />
     </div>
   );
 }
