@@ -1,0 +1,50 @@
+.footer {
+  min-height: 40%;
+  background-color: #061121;
+  color: white;
+}
+
+.footer-image {
+  width: 70px;
+  height: 50px;
+  object-fit: cover;
+  margin-left: 650px;
+}
+
+.main h2 {
+  color: white;
+  margin-left: 100px;
+}
+.introduction p {
+  display: flex;
+  flex-direction: row;
+}
+
+.row ul {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.footermenu-list a {
+  cursor: pointer;
+  text-decoration: none;
+  list-style-type: none;
+  color: rgb(163, 163, 163);
+}
+
+.linkovi {
+  width: 700px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-left: 58px;
+}
+
+.linkovi ul li {
+  margin-bottom: 20px;
+}
+
+.linkovi p {
+  margin-bottom: 35px;
+}

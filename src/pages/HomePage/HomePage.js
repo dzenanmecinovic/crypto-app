@@ -4,7 +4,7 @@ import "./HomePage.css";
 
 const HomePage = () => {
   return (
-    <>
+    <div className="main">
       <video id="backgroundVideo" autoPlay loop muted>
         <source src={video} type="video/mp4"></source>
       </video>
@@ -20,7 +20,7 @@ const HomePage = () => {
           </a>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
