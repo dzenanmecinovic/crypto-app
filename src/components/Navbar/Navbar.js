@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/btcoinlogo-removebg-preview.png";
 
 export default function Navbar() {
   const [navbar, setNavbar] = useState(false);

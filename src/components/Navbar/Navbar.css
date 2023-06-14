@@ -21,4 +21,10 @@ header h2 {
 }
 #logoStyle {
   width: 5.5vw;
+  box-shadow: rgba(158, 133, 20, 0.288) 0px 30px 60px -12px inset,
+    rgba(255, 166, 1, 0.979) 0px 18px 36px -18px inset;
+  border-radius: 50%;
+}
+
+.isActive {
 }
