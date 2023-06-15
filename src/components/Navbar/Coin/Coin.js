@@ -1,7 +1,5 @@
-import React, { useContext } from "react";
-import { AppContext } from "../../../context/AppContext";
+import React from "react";
 
 export default function Coin() {
-  const { favorites } = useContext(AppContext);
   return <div className="coins"></div>;
 }

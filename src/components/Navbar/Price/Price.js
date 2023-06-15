@@ -3,13 +3,12 @@ import "./Price.css";
 import { AppContext } from "../../../context/AppContext";
 
 export default function Price({ UUID, iconUrl, name, price }) {
-  const { setFav, favCoins } = useContext(AppContext);
+  const { favorites } = useContext(AppContext);
   const toggleFavorite = (UUID) => {
     if (this.UUID === UUID) {
-      setFav(true);
-      favCoins.push(this);
+      favorites.push(this);
     } else {
-      setFav(false);
+      return;
     }
   };
   return (
