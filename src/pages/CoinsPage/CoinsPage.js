@@ -5,7 +5,7 @@ import Coin from "../../components/Navbar/Coin/Coin";
 export default function CoinsPage() {
   return (
     <div className="coinsPage">
-      <Coin />
+      <h1>Test</h1>
     </div>
   );
 }
