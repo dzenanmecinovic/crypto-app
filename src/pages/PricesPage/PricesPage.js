@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Price from "../../components/Navbar/Price/Price";
 import "./PricesPage.css";
 import axios from "axios";

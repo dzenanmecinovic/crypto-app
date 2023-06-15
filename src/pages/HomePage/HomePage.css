@@ -78,3 +78,61 @@
   width: 70px;
   height: 50px;
 }
+
+.buy-sell-trade {
+  background-color: white;
+  width: 100vh;
+  margin-top: 100px;
+}
+
+.naslov-text {
+  width: 500px;
+  position: relative;
+  left: 720px;
+  bottom: 500px;
+}
+
+.naslov-text h1 {
+  font-size: 2.7rem;
+  color: rgb(45, 50, 59);
+}
+
+.naslov-text p {
+  font-size: 1.3rem;
+  line-height: 40px;
+  color: rgb(45, 50, 59);
+}
+
+.crypto {
+  width: 100vh;
+  margin-top: -130px;
+}
+
+.cryptoApp-text {
+  color: rgb(45, 50, 59);
+  margin-left: 100px;
+  width: 500px;
+}
+
+.crypto img {
+  background-color: rgb(240, 20, 148);
+  border-radius: 60px;
+  position: relative;
+  left: 700px;
+  bottom: 500px;
+}
+
+.money-freely {
+  width: 500px;
+  color: rgb(45, 50, 59);
+  margin-left: 750px;
+}
+
+.money {
+  width: 100vh;
+}
+
+.money img {
+  margin-top: -300px;
+  margin-left: 100px;
+}
