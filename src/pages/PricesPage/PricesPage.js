@@ -16,7 +16,7 @@ export default function PricesPage() {
         "tiers[0]": "1",
         orderBy: "marketCap",
         orderDirection: "desc",
-        limit: "10",
+        limit: "20",
         offset: "0",
       },
       headers: {
@@ -42,19 +42,34 @@ export default function PricesPage() {
       {data === null ? (
         <p id="loading">Loading...</p>
       ) : (
-        <p>
-          {data.map((coin) => {
-            return (
-              <Price
-                key={coin.UUID}
-                iconUrl={coin.iconUrl}
-                name={coin.name}
-                price={coin.price}
-                toggleFavorite={coin.toggleFavorite}
-              />
-            );
-          })}
-        </p>
+        <div className="prikazCoinovaFlex">
+          <div className="prikazCoinova">
+            {data.slice(0, 10).map((coin) => {
+              return (
+                <Price
+                  key={coin.UUID}
+                  iconUrl={coin.iconUrl}
+                  name={coin.name}
+                  price={coin.price}
+                  toggleFavorite={coin.toggleFavorite}
+                />
+              );
+            })}
+          </div>
+          <div className="prikazCoinovadrugi">
+            {data.slice(10, 20).map((coin) => {
+              return (
+                <Price
+                  key={coin.UUID}
+                  iconUrl={coin.iconUrl}
+                  name={coin.name}
+                  price={coin.price}
+                  toggleFavorite={coin.toggleFavorite}
+                />
+              );
+            })}
+          </div>
+        </div>
       )}
     </div>
   );

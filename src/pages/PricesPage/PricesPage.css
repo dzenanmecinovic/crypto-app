@@ -17,3 +17,8 @@
 #loading {
   font-size: 2.5rem;
 }
+
+.prikazCoinovaFlex {
+  display: flex;
+  gap: 25vw;
+}
