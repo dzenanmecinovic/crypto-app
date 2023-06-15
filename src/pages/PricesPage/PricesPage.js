@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Price from "../../components/Navbar/Price/Price";
 import "./PricesPage.css";
 import axios from "axios";
@@ -33,9 +33,11 @@ export default function PricesPage() {
     }
   };
 
-  setTimeout(() => {
-    fetchData();
-  }, 1000);
+  useEffect(() => {
+    setTimeout(() => {
+      fetchData();
+    }, 500);
+  }, [data]);
 
   return (
     <div className="pricesPage">
@@ -44,7 +46,7 @@ export default function PricesPage() {
       ) : (
         <div className="prikazCoinovaFlex">
           <div className="prikazCoinova">
-            {data.slice(0, 10).map((coin) => {
+            {data.slice(0, 9).map((coin) => {
               return (
                 <Price
                   key={coin.UUID}
@@ -57,7 +59,7 @@ export default function PricesPage() {
             })}
           </div>
           <div className="prikazCoinovadrugi">
-            {data.slice(10, 20).map((coin) => {
+            {data.slice(9, 18).map((coin) => {
               return (
                 <Price
                   key={coin.UUID}

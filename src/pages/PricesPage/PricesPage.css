@@ -11,14 +11,14 @@
 #favorite {
   position: relative;
   bottom: 1vh;
-  left: 2vw;
+  left: 1.5vw;
 }
 
 #loading {
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 .prikazCoinovaFlex {
   display: flex;
-  gap: 25vw;
+  gap: 28vw;
 }
