@@ -1,11 +1,13 @@
 .pricesPage {
-  height: 90vh;
+  min-height: 100vh;
   width: 100vw;
   background: url(../../assets/pixelscott.jpg);
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 #favorite {
