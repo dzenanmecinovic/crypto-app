@@ -3,12 +3,10 @@ import React, { createContext, useState } from "react";
 const AppContext = createContext();
 
 function ContextProvider({ children }) {
-  const [fav, setFav] = useState(false);
-  const [favCoins] = useState([]);
+  const [favorites, setFavorites] = useState([]);
   const values = {
-    fav,
-    setFav,
-    favCoins,
+    favorites,
+    setFavorites,
   };
   return <AppContext.Provider value={values}>{children}</AppContext.Provider>;
 }
