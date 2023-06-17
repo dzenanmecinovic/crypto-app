@@ -99,7 +99,9 @@ export default function PricesPage() {
                   <TableRow>
                     <TableCell align="right">#</TableCell>
                     <TableCell></TableCell>
-                    <TableCell align="right">Name</TableCell>
+                    <TableCell align="right" style={{ width: 100 }}>
+                      Name
+                    </TableCell>
                     <TableCell align="right">Price</TableCell>
                     <TableCell align="right">Market Cap</TableCell>
                     <TableCell align="right">7 days</TableCell>
@@ -119,7 +121,7 @@ export default function PricesPage() {
                       </TableCell>
                       <TableCell align="right">{coin.name}</TableCell>
                       <TableCell align="right">
-                        $${Number(coin.price).toLocaleString()}
+                        ${Number(coin.price).toLocaleString()}
                       </TableCell>
                       <TableCell align="right">
                         ${Number(coin.marketCap).toLocaleString()}
