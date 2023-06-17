@@ -22,7 +22,6 @@ import { Sparklines, SparklinesLine } from "react-sparklines";
 import { AppContext } from "../../context/AppContext";
 import SearchIcon from "@mui/icons-material/Search";
 
-
 export default function PricesPage() {
   const [data, setData] = useState(null);
   const { searchTerm, handleChange } = useContext(AppContext);
@@ -63,7 +62,6 @@ export default function PricesPage() {
   const navigate = useNavigate();
 
   return (
-
     <div id="main">
       <div className="pricesPage">
         {data === null ? (
@@ -187,40 +185,6 @@ export default function PricesPage() {
           </>
         )}
       </div>
-
-    <div className="pricesPage">
-      {data === null ? (
-        <p id="loading">Loading...</p>
-      ) : (
-        <div className="prikazCoinovaFlex">
-          <div className="prikazCoinova">
-            {data.slice(0, 9).map((coin) => {
-              return (
-                <Price
-                  key={coin.UUID}
-                  iconUrl={coin.iconUrl}
-                  name={coin.name}
-                  price={coin.price}
-                  toggleFavorite={coin.toggleFavorite}
-                />
-              );
-            })}
-          </div>
-          <div className="prikazCoinovadrugi">
-            {data.slice(9, 18).map((coin) => {
-              return (
-                <Price
-                  key={coin.UUID}
-                  iconUrl={coin.iconUrl}
-                  name={coin.name}
-                  price={coin.price}
-                  toggleFavorite={coin.toggleFavorite}
-                />
-              );
-            })}
-          </div>
-        </div>
-      )}
     </div>
   );
 }
