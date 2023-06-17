@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import Price from "../../components/Navbar/Price/Price";
 import "./PricesPage.css";
 import axios from "axios";
+
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import {
   Container,
@@ -20,7 +21,6 @@ import { useNavigate } from "react-router-dom";
 import { Sparklines, SparklinesLine } from "react-sparklines";
 import { AppContext } from "../../context/AppContext";
 import SearchIcon from "@mui/icons-material/Search";
-
 
 export default function PricesPage() {
   const [data, setData] = useState(null);
@@ -65,7 +65,7 @@ export default function PricesPage() {
     <div id="main">
       <div className="pricesPage">
         {data === null ? (
-          <HashLoader color="#36d7b7" />
+          <p id="loading">Loading...</p>
         ) : (
           <>
             <Container
@@ -83,7 +83,7 @@ export default function PricesPage() {
                 label="Search"
                 value={searchTerm}
                 onChange={handleChange}
-                sx={{ width: 250, backgroundColor: "white", borderRadius: 2 }}
+                sx={{ width: 250, backgroundColor: "white", borderRadius: 1 }}
                 InputProps={{
                   endAdornment: (
                     <InputAdornment position="end">
@@ -99,9 +99,7 @@ export default function PricesPage() {
                   <TableRow>
                     <TableCell align="right">#</TableCell>
                     <TableCell></TableCell>
-                    <TableCell align="right" style={{ width: 100 }}>
-                      Name
-                    </TableCell>
+                    <TableCell align="right">Name</TableCell>
                     <TableCell align="right">Price</TableCell>
                     <TableCell align="right">Market Cap</TableCell>
                     <TableCell align="right">7 days</TableCell>
@@ -121,7 +119,7 @@ export default function PricesPage() {
                       </TableCell>
                       <TableCell align="right">{coin.name}</TableCell>
                       <TableCell align="right">
-                        ${Number(coin.price).toLocaleString()}
+                        $${Number(coin.price).toLocaleString()}
                       </TableCell>
                       <TableCell align="right">
                         ${Number(coin.marketCap).toLocaleString()}
