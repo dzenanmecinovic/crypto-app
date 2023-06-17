@@ -5,7 +5,6 @@ import HomePage from "./pages/HomePage/HomePage";
 import PricesPage from "./pages/PricesPage/PricesPage";
 import Footer from "./components/Footer/Footer";
 import CoinsPage from "./pages/CoinsPage/CoinsPage";
-
 import CardCoinsPage from "./pages/CardCoinsPage/CardCoinsPage";
 import LogIn from "./pages/LogIn/LogIn";
 
