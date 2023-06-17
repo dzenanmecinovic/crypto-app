@@ -63,6 +63,12 @@ export default function Navbar() {
         >
           <h2 style={{ fontFamily: "Arial" }}>My Coins</h2>
         </NavLink>
+        <NavLink
+          to={"/login"}
+          style={({ isActive }) => (isActive ? activeStyles : nonActiveStyles)}
+        >
+          <h2>Log in</h2>
+        </NavLink>
       </header>
     </>
   );

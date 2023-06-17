@@ -22,6 +22,7 @@ const Footer = () => {
               Support CryptoApp.org:
             </span>
             <a
+              href="/login"
               onclick="openDonationModal()"
               class="donate-btn btn-bright"
               style={{
@@ -30,6 +31,7 @@ const Footer = () => {
                 color: "white",
                 marginLeft: "15px",
                 cursor: "pointer",
+                textDecoration: "none",
               }}
             >
               Donate
