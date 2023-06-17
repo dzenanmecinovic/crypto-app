@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 5%;
+  padding-top: 10%;
   padding-bottom: 5%;
 }
 
@@ -23,4 +23,8 @@
 .prikazCoinovaFlex {
   display: flex;
   gap: 28vw;
+}
+
+#links {
+  text-decoration: none;
 }
