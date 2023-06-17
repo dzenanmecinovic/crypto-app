@@ -99,7 +99,9 @@ export default function PricesPage() {
                   <TableRow>
                     <TableCell align="right">#</TableCell>
                     <TableCell></TableCell>
-                    <TableCell align="right">Name</TableCell>
+                    <TableCell align="right" style={{ width: 100 }}>
+                      Name
+                    </TableCell>
                     <TableCell align="right">Price</TableCell>
                     <TableCell align="right">Market Cap</TableCell>
                     <TableCell align="right">7 days</TableCell>
