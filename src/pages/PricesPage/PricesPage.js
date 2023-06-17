@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from "react";
 import Price from "../../components/Navbar/Price/Price";
 import "./PricesPage.css";
 import axios from "axios";
-
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import {
   Container,
@@ -21,6 +20,7 @@ import { useNavigate } from "react-router-dom";
 import { Sparklines, SparklinesLine } from "react-sparklines";
 import { AppContext } from "../../context/AppContext";
 import SearchIcon from "@mui/icons-material/Search";
+
 
 export default function PricesPage() {
   const [data, setData] = useState(null);
@@ -65,7 +65,7 @@ export default function PricesPage() {
     <div id="main">
       <div className="pricesPage">
         {data === null ? (
-          <p id="loading">Loading...</p>
+          <HashLoader color="#36d7b7" />
         ) : (
           <>
             <Container
