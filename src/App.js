@@ -6,6 +6,7 @@ import PricesPage from "./pages/PricesPage/PricesPage";
 import Footer from "./components/Footer/Footer";
 import CoinsPage from "./pages/CoinsPage/CoinsPage";
 import LogIn from "./pages/LogIn/LogIn";
+import CardCoinsPage from "./pages/CardCoinsPage/CardCoinsPage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/prices" element={<PricesPage />}></Route>
         <Route path="/coins" element={<CoinsPage />}></Route>
         <Route path="/login" element={<LogIn />}></Route>
+        <Route path="/cardcoins/:uuid" element={<CardCoinsPage />}></Route>
       </Routes>
       <Footer />
     </div>
