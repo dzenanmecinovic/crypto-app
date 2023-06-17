@@ -24,6 +24,7 @@ import SearchIcon from "@mui/icons-material/Search";
 
 export default function PricesPage() {
   const [data, setData] = useState(null);
+  const navigate = useNavigate();
   const { searchTerm, handleChange } = useContext(AppContext);
 
   const fetchData = async () => {
@@ -58,8 +59,7 @@ export default function PricesPage() {
       fetchData();
     }, 500);
   }, [data]);
-  console.log(data);
-  const navigate = useNavigate();
+  // console.log(data);
 
   return (
     <div id="main">

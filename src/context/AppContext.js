@@ -28,7 +28,6 @@ function ContextProvider({ children }) {
     });
   };
 
-  
   const values = {
     favorites,
     searchTerm,
