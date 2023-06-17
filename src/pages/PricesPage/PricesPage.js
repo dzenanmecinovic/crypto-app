@@ -83,7 +83,7 @@ export default function PricesPage() {
                 label="Search"
                 value={searchTerm}
                 onChange={handleChange}
-                sx={{ width: 250, backgroundColor: "white", borderRadius: 1 }}
+                sx={{ width: 250, backgroundColor: "white", borderRadius: 2 }}
                 InputProps={{
                   endAdornment: (
                     <InputAdornment position="end">
