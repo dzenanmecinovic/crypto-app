@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Price from "../../components/Navbar/Price/Price";
 import "./PricesPage.css";
 import axios from "axios";
@@ -67,34 +67,6 @@ export default function PricesPage() {
         {data === null ? (
           <p id="loading">Loading...</p>
         ) : (
-          // // <div className="prikazCoinovaFlex">
-          // //   <div className="prikazCoinova">
-          // //     {data.slice(0, 9).map((coin) => {
-          // //       return (
-          // //         <Price
-          // //           key={coin.UUID}
-          // //           iconUrl={coin.iconUrl}
-          // //           name={coin.name}
-          // //           price={coin.price}
-          // //           toggleFavorite={coin.toggleFavorite}
-          // //         />
-          // //       );
-          // //     })}
-          // //   </div>
-          // //   <div className="prikazCoinovadrugi">
-          // //     {data.slice(9, 18).map((coin) => {
-          // //       return (
-          // //         <Price
-          // //           key={coin.UUID}
-          // //           iconUrl={coin.iconUrl}
-          // //           name={coin.name}
-          // //           price={coin.price}
-          // //           toggleFavorite={coin.toggleFavorite}
-          // //         />
-          // //       );
-          // //     })}
-          // //   </div>
-          // </div>
           <>
             <Container
               maxWidth="md"
