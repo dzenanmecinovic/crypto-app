@@ -1,17 +1,14 @@
 .body {
-<<<<<<< HEAD
   margin-top: -40px;
   margin-bottom: -40px;
   width: 100%;
   background-color: orange;
   height: 140vh;
-=======
   width: 100%;
   background-color: orange;
   margin-bottom: -500px;
   margin-top: -40px;
   min-height: 1000px;
->>>>>>> login
 }
 
 .row {
@@ -28,18 +25,9 @@
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 
-.dugme1 {
-  cursor: pointer;
-  margin-left: 230px;
-}
-
 input.input-error,
 select.input-error {
   border-color: red;
-}
-
-.dugme1:disabled {
-  opacity: 0.35;
 }
 
 .uvod {
