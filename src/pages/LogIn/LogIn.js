@@ -7,6 +7,8 @@ import CustomSelect from "./CustomSelect";
 import CustomCheckBox from "./CustomCheckBox";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import buySell from "../../assets/buy-sell-removebg-preview.png";
+import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
 
 const onSubmit = async (values, actions) => {
   console.log(values);
@@ -76,19 +78,16 @@ export default function LogIn() {
           validationSchema={basicSchema}
           onSubmit={onSubmit}
         >
-          {({ isSubmitting, values }) => (
+          {({ values }) => (
             <Form>
               <h2 style={{ marginLeft: "20px" }}>Register</h2>
               <hr></hr>
-              <div className="firstname">
-                <CustomInput
-                  label="First name"
-                  name="firstname"
-                  type="text"
-                  placeholder="Enter your first name"
-                />
-              </div>
-              <br></br>
+              <CustomInput
+                label="First name"
+                name="firstname"
+                type="text"
+                placeholder="Enter your first name"
+              />
               <div className="lastname">
                 <CustomInput
                   label="Last name"
@@ -97,7 +96,6 @@ export default function LogIn() {
                   placeholder="Enter your last name"
                 />
               </div>
-              <br></br>
               <div className="password">
                 <CustomInput
                   label="Password"
@@ -106,7 +104,6 @@ export default function LogIn() {
                   placeholder="Enter your password"
                 />
               </div>
-              <br></br>
               <div className="confirm">
                 <CustomInput
                   label="Confirm password"
@@ -115,19 +112,13 @@ export default function LogIn() {
                   placeholder="Enter your confirmpassword"
                 />
               </div>
-              <br></br>
               <div className="payment">
-                <CustomSelect
-                  label="Payment & Purchase"
-                  name="paymentpurchase"
-                  placeholder="Please select a type"
-                >
-                  <option values="">Please select a type</option>
-                  <option value="buy">Buy</option>
-                  <option value="donate">Donate</option>
+                <CustomSelect label="Payment" name="paymentpurchase">
+                  {/* <option value="buy">Buy</option> */}
+                  {/* <option value="donate">Donate</option>
                   <option value="sell">Sell</option>
                   <option value="trade">Trade</option>
-                  <option value="invest">Invest</option>
+                  <option value="invest">Invest</option> */}
                 </CustomSelect>
               </div>
               <br></br>
@@ -136,9 +127,15 @@ export default function LogIn() {
               </div>
               <br></br>
               <hr></hr>
-              <button type="submit" disabled={isSubmitting} className="btn">
-                Log in
-              </button>
+              <Stack direction="row" spacing={2}>
+                <Button
+                  variant="contained"
+                  type="submit"
+                  sx={{ alignSelf: "center" }}
+                >
+                  Log in
+                </Button>
+              </Stack>
             </Form>
           )}
         </Formik>

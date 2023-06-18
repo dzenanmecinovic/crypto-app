@@ -1,9 +1,17 @@
 .body {
+<<<<<<< HEAD
   margin-top: -40px;
   margin-bottom: -40px;
   width: 100%;
   background-color: orange;
   height: 140vh;
+=======
+  width: 100%;
+  background-color: orange;
+  margin-bottom: -500px;
+  margin-top: -40px;
+  min-height: 1000px;
+>>>>>>> login
 }
 
 .row {
@@ -17,17 +25,10 @@
   padding: 20px;
   margin-bottom: 100px;
   border-radius: 60px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 
-.btn {
-  background-color: blue;
-  color: aliceblue;
-  border: none;
-  border-radius: 3px;
-  width: 20%;
-  padding: 1rem 0.5rem;
-  font-size: 1rem;
-  font-weight: bold;
+.dugme1 {
   cursor: pointer;
   margin-left: 230px;
 }
@@ -37,7 +38,7 @@ select.input-error {
   border-color: red;
 }
 
-.btn:disabled {
+.dugme1:disabled {
   opacity: 0.35;
 }
 
