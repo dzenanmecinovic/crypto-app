@@ -10,7 +10,7 @@ const Footer = () => {
           <img src={image}></img>
         </div>
         <div className="main">
-          <h2 style={{ margin: "40px" }}>&copy;CopyRight2023</h2>
+          <h2 style={{ margin: "40px" }}>&copy;Copyright2023</h2>
           <div className="donate-row" style={{ marginBottom: "40px" }}>
             <span
               className="footer-title"
