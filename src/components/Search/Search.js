@@ -21,6 +21,7 @@ export default function Search() {
   const [data, setData] = useState([]);
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
+  const visina = data.length;
 
   const fetchData = async () => {
     const options = {
@@ -88,8 +89,10 @@ export default function Search() {
           />
         </Container>
       )}
-      (
-      <TableContainer component={Paper} sx={{ width: "700px" }}>
+      <TableContainer
+        component={Paper}
+        sx={{ width: "700px", height: { visina } }}
+      >
         <Table aria-label="simple table">
           <TableHead>
             <TableRow>
@@ -119,7 +122,7 @@ export default function Search() {
                   </TableCell>
                   <TableCell align="right">{coin.name}</TableCell>
                   <TableCell align="right">
-                    $${Number(coin.price).toLocaleString()}
+                    ${Number(coin.price).toLocaleString()}
                   </TableCell>
                   <TableCell align="right">
                     ${Number(coin.marketCap).toLocaleString()}
@@ -154,7 +157,6 @@ export default function Search() {
           </TableBody>
         </Table>
       </TableContainer>
-      ))
     </>
   );
 }
