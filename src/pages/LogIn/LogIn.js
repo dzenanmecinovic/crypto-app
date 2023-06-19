@@ -39,7 +39,7 @@ export default function LogIn() {
           textDecoration: "underline",
         }}
       >
-        Buy&Donate.orgCryptoApp
+        Buy&Donate.org CryptoApp
       </h1>
       <div className="uvod">
         <h1 style={{ fontSize: "3rem" }}>Grow your non-cash revenue.</h1>
