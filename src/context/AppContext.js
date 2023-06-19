@@ -4,11 +4,6 @@ const AppContext = createContext();
 
 function ContextProvider({ children }) {
   const [favorites] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("");
-
-  const handleChange = (event) => {
-    setSearchTerm(event.target.value);
-  };
 
   const [data, setData] = useState({
     coins: null,
@@ -30,8 +25,6 @@ function ContextProvider({ children }) {
 
   const values = {
     favorites,
-    searchTerm,
-    handleChange,
   };
 
   return (
