@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./PricesPage.css";
 import axios from "axios";
-
-// import { FavoriteBorder } from "@mui/icons-material";
+import SyncLoader from "react-spinners/SyncLoader";
 import Search from "../../components/Search/Search";
 
 export default function PricesPage() {
@@ -46,7 +45,7 @@ export default function PricesPage() {
     <div id="main">
       <div className="pricesPage">
         {data === null ? (
-          <p id="loading">Loading...</p>
+          <SyncLoader color="black" />
         ) : (
           <>
             <Search />
