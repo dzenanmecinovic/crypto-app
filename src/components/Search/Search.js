@@ -16,7 +16,6 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { Sparklines, SparklinesLine } from "react-sparklines";
-import { Dimmer, Loader, Image, Segment } from "semantic-ui-react";
 
 export default function Search() {
   const [data, setData] = useState([]);
@@ -61,36 +60,37 @@ export default function Search() {
   // console.log(data.filter((coin) => coin.name));
   return (
     <>
-      <Container
-        maxWidth="md"
-        sx={{
-          position: "absolute",
-          top: 120,
-          left: "40%",
-          color: "white",
-        }}
-      >
-        <TextField
-          id="search"
-          type="search"
-          label="Search"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          sx={{ width: 250, backgroundColor: "white", borderRadius: 1 }}
-          InputProps={{
-            endAdornment: (
-              <InputAdornment position="end">
-                <SearchIcon />
-              </InputAdornment>
-            ),
+      {data === null && data === undefined ? (
+        <p>loading</p>
+      ) : (
+        <Container
+          maxWidth="md"
+          sx={{
+            position: "absolute",
+            top: 120,
+            left: "40%",
+            color: "white",
           }}
-        />
-      </Container>
-
-      <TableContainer
-        component={Paper}
-        sx={{ width: "700px", height: { visina } }}
-      >
+        >
+          <TextField
+            id="search"
+            type="search"
+            label="Search"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            sx={{ width: 250, backgroundColor: "white", borderRadius: 1 }}
+            InputProps={{
+              endAdornment: (
+                <InputAdornment position="end">
+                  <SearchIcon />
+                </InputAdornment>
+              ),
+            }}
+          />
+        </Container>
+      )}
+      
+      <TableContainer component={Paper} sx={{ width: "700px" }}>
         <Table aria-label="simple table">
           <TableHead>
             <TableRow>
