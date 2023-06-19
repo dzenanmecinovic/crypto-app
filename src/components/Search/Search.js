@@ -88,7 +88,6 @@ export default function Search() {
           />
         </Container>
       )}
-      (
       <TableContainer component={Paper} sx={{ width: "700px" }}>
         <Table aria-label="simple table">
           <TableHead>
@@ -154,7 +153,6 @@ export default function Search() {
           </TableBody>
         </Table>
       </TableContainer>
-      ))
     </>
   );
 }
