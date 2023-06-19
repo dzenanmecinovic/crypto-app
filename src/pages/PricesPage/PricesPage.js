@@ -1,30 +1,12 @@
-import React, { useContext, useEffect, useState } from "react";
-import Price from "../../components/Navbar/Price/Price";
+import React, { useEffect, useState } from "react";
 import "./PricesPage.css";
 import axios from "axios";
-import SearchIcon from "@mui/icons-material/Search";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import {
-  Container,
-  InputAdornment,
-  Paper,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  TextField,
-} from "@mui/material";
+
 // import { FavoriteBorder } from "@mui/icons-material";
-import { useNavigate } from "react-router-dom";
-import { Sparklines, SparklinesLine } from "react-sparklines";
 import Search from "../../components/Search/Search";
 
 export default function PricesPage() {
   const [data, setData] = useState(null);
-  const navigate = useNavigate();
-  const [query, setQuery] = useState("");
 
   const fetchData = async () => {
     const options = {
