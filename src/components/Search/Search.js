@@ -109,7 +109,7 @@ export default function Search() {
                 <TableRow
                   key={coin.uuid}
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-                  onClick={() => navigate(`/coins/${coin.uuid}`)}
+                  onClick={() => navigate(`/prices/${coin.uuid}`)}
                 >
                   <TableCell align="right">{coin.rank}</TableCell>
                   <TableCell component="th" scope="row">
