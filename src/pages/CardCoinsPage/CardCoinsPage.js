@@ -14,7 +14,7 @@ import {
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
 export default function CardCoinsPage() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
   const { uuid } = useParams();
 
   const fetchData = async () => {
@@ -50,9 +50,11 @@ export default function CardCoinsPage() {
     }, 500);
   }, [data]);
 
-  // return (
-  //   <div id="main">
-  //     <p>{data.name}</p>
-  //   </div>
-  // );
+  return (
+    <>
+      {data.map((coin) => (
+        <p>{coin.name}</p>
+      ))}
+    </>
+  );
 }
