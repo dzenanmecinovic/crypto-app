@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import "./PricesPage.css";
 import axios from "axios";
 import SyncLoader from "react-spinners/SyncLoader";
@@ -6,7 +6,6 @@ import Search from "../../components/Search/Search";
 import { AppContext } from "../../context/AppContext";
 
 export default function PricesPage() {
-  // const [data, setData] = useState(null);
   const { data, setData } = useContext(AppContext);
 
   const fetchData = async () => {

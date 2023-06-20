@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
 import SingleCoin from "./SingleCoin";
-import "./SCoin.css";
 import { AppContext } from "../../../context/AppContext";
 
 export default function SCoin() {
@@ -11,12 +10,13 @@ export default function SCoin() {
     return (e.uuid = uuid);
   });
   return (
-    <div className="singleCoin">
+    <div>
       <SingleCoin
         uuid={coin.uuid}
         iconUrl={coin.iconUrl}
         name={coin.name}
         price={coin.price}
+        rank={coin.rank}
       />
     </div>
   );

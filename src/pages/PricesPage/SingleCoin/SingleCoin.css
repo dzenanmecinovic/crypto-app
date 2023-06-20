@@ -1,0 +1,28 @@
+.singleCoin {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(../../../assets/pixelscott.jpg);
+  font-size: 2rem;
+  margin: -30px;
+}
+
+#ikonica {
+  height: 15vh;
+}
+
+#backButton {
+  text-decoration: none;
+  background-color: #0000ce;
+  color: #ffffff;
+  padding: 0.5rem;
+  border-radius: 10px;
+  transition: all 0.2s;
+}
+
+#backButton:hover {
+  background-color: #2b2bff;
+  color: #000000;
+}
