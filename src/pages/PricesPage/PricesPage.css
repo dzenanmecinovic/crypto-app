@@ -1,6 +1,9 @@
+/* .pricesMain {
+  min-height: 100vh;
+} */
+
 .pricesPage {
   width: 100vw;
-  background: url(../../assets/pixelscott.jpg);
   overflow: hidden;
   display: flex;
   justify-content: center;

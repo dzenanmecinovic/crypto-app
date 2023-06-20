@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Coin({ UUID, iconUrl, name, price }) {
+export default function Coin({ uuid, iconUrl, name, price }) {
   return (
     <div className="coins">
       <div className="contentCoin">

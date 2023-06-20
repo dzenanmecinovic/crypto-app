@@ -5,8 +5,9 @@ import HomePage from "./pages/HomePage/HomePage";
 import PricesPage from "./pages/PricesPage/PricesPage";
 import Footer from "./components/Footer/Footer";
 import CoinsPage from "./pages/CoinsPage/CoinsPage";
-import CardCoinsPage from "./pages/CardCoinsPage/CardCoinsPage";
 import LogIn from "./pages/LogIn/LogIn";
+import Layout from "./components/Layout/Layout";
+import SCoin from "./pages/PricesPage/SingleCoin/SCoin";
 
 function App() {
   return (
@@ -14,9 +15,11 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
-        <Route path="/prices" element={<PricesPage />}></Route>
+        <Route element={<Layout />}>
+          <Route path="/prices" element={<PricesPage />}></Route>
+        </Route>
         <Route path="/coins" element={<CoinsPage />}></Route>
-        <Route path="/coincard/:uuid" element={<CardCoinsPage />}></Route>
+        <Route path="/coins/:uuid" element={<SCoin />}></Route>
         <Route path="/login" element={<LogIn />}></Route>
       </Routes>
       <Footer />

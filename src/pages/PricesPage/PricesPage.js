@@ -1,18 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./PricesPage.css";
 import axios from "axios";
 import SyncLoader from "react-spinners/SyncLoader";
 import Search from "../../components/Search/Search";
+import { AppContext } from "../../context/AppContext";
 
 export default function PricesPage() {
-  const [data, setData] = useState(null);
+  // const [data, setData] = useState(null);
+  const { data, setData } = useContext(AppContext);
 
   const fetchData = async () => {
     const options = {
       method: "GET",
       url: "https://coinranking1.p.rapidapi.com/coins",
       params: {
-        referenceCurrencyUuid: "yhjMzLPhuIDl",
+        referenceCurrencyuuid: "yhjMzLPhuIDl",
         timePeriod: "24h",
         "tiers[0]": "1",
         orderBy: "marketCap",
@@ -29,6 +31,7 @@ export default function PricesPage() {
     try {
       const response = await axios.request(options);
       setData(response.data.data.coins);
+      console.log(response.data.data);
     } catch (error) {
       console.error(error);
     }
@@ -42,7 +45,7 @@ export default function PricesPage() {
   // console.log(data);
 
   return (
-    <div id="main">
+    <div id="pricesMain">
       <div className="pricesPage">
         {data === null ? (
           <SyncLoader color="black" />

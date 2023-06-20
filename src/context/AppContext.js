@@ -1,37 +1,16 @@
-import React, { createContext, useState, useEffect } from "react";
+import React, { createContext, useState } from "react";
 
 const AppContext = createContext();
 
 function ContextProvider({ children }) {
-  const [favorites] = useState([]);
-
-  const [data, setData] = useState({
-    coins: null,
-    favoriteCoins: [],
-  });
-
-  const addFavoriteCoin = (coinId) => {
-    setData((prevData) => {
-      const updatedFavoriteCoins = Array.isArray(prevData.favoriteCoins)
-        ? [...prevData.favoriteCoins, coinId]
-        : [coinId];
-
-      return {
-        ...prevData,
-        favoriteCoins: updatedFavoriteCoins,
-      };
-    });
-  };
+  const [data, setData] = useState([]);
 
   const values = {
-    favorites,
+    data,
+    setData,
   };
 
-  return (
-    <AppContext.Provider value={{ data, addFavoriteCoin }}>
-      {children}
-    </AppContext.Provider>
-  );
+  return <AppContext.Provider value={values}>{children}</AppContext.Provider>;
 }
 
 export { AppContext, ContextProvider };
