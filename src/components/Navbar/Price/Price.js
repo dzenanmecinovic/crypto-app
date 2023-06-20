@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import "./Price.css";
 import { AppContext } from "../../../context/AppContext";
 
-export default function Price({ UUID, iconUrl, name, price }) {
+export default function Price({ uuid, iconUrl, name, price }) {
   return (
     <div className="prices">
       <div className="contentCoin">

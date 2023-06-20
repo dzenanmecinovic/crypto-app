@@ -12,3 +12,7 @@ body {
 img {
   user-select: none;
 }
+
+.visinaStranice {
+  height: 100vh;
+}

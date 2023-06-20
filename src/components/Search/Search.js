@@ -16,19 +16,19 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { Sparklines, SparklinesLine } from "react-sparklines";
+import { AppContext } from "../../context/AppContext";
 
 export default function Search() {
-  const [data, setData] = useState([]);
+  const { data, setData } = useContext(AppContext);
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
-  const visina = data.length;
 
   const fetchData = async () => {
     const options = {
       method: "GET",
       url: "https://coinranking1.p.rapidapi.com/coins",
       params: {
-        referenceCurrencyUuid: "yhjMzLPhuIDl",
+        referenceCurrencyuuid: "yhjMzLPhuIDl",
         timePeriod: "24h",
         "tiers[0]": "1",
         orderBy: "marketCap",
@@ -55,9 +55,6 @@ export default function Search() {
       fetchData();
     }, 500);
   }, [data]);
-
-  // console.log(data);
-  // console.log(data.filter((coin) => coin.name));
   return (
     <>
       {data === null && data === undefined ? (
@@ -89,7 +86,7 @@ export default function Search() {
           />
         </Container>
       )}
-      
+
       <TableContainer component={Paper} sx={{ width: "700px" }}>
         <Table aria-label="simple table">
           <TableHead>
@@ -110,9 +107,9 @@ export default function Search() {
               .filter((coin) => coin.name.toLowerCase().includes(query))
               .map((coin) => (
                 <TableRow
-                  key={coin.UUID}
+                  key={coin.uuid}
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-                  onClick={() => navigate(`/coincard/${coin.uuid}`)}
+                  onClick={() => navigate(`/coins/${coin.uuid}`)}
                 >
                   <TableCell align="right">{coin.rank}</TableCell>
                   <TableCell component="th" scope="row">

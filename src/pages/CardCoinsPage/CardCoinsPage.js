@@ -22,7 +22,7 @@ export default function CardCoinsPage() {
       method: "GET",
       url: "https://coinranking1.p.rapidapi.com/coins/${uuid}",
       params: {
-        referenceCurrencyUuid: "yhjMzLPhuIDl",
+        referenceCurrencyuuid: "yhjMzLPhuIDl",
         timePeriod: "24h",
         "tiers[0]": "1",
         orderBy: "marketCap",
