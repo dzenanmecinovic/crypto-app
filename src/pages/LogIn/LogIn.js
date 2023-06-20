@@ -114,18 +114,16 @@ export default function LogIn() {
               </div>
               <div className="payment">
                 <CustomSelect label="Payment" name="paymentpurchase">
-                  {/* <option value="buy">Buy</option> */}
-                  {/* <option value="donate">Donate</option>
+                  <option value="buy">Buy</option>
+                  <option value="donate">Donate</option>
                   <option value="sell">Sell</option>
                   <option value="trade">Trade</option>
-                  <option value="invest">Invest</option> */}
+                  <option value="invest">Invest</option>
                 </CustomSelect>
               </div>
-              <br></br>
-              <div className="ckeckbox">
+              <div className="checkbox">
                 <CustomCheckBox name="acceptedTos" type="checkbox" />
               </div>
-              <br></br>
               <hr></hr>
               <Stack direction="row" spacing={2}>
                 <Button
