@@ -68,7 +68,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="resource">
-            <p className="footer-title" style={{ marginLeft: "38px" }}>
+            <p className="footer-title" style={{ marginLeft: "39px" }}>
               Resources:
             </p>
             <ul className="footermenu-list" style={{ listStyleType: "none" }}>
