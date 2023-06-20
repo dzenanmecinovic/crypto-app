@@ -1,6 +1,5 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./Price.css";
-import { AppContext } from "../../../context/AppContext";
 
 export default function Price({ uuid, iconUrl, name, price }) {
   return (
