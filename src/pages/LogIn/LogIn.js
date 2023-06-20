@@ -77,8 +77,8 @@ export default function LogIn() {
           onSubmit={onSubmit}
         >
           {({ isSubmitting, values }) => (
-            <Form>
-              <h2 style={{ marginLeft: "20px" }}>Register</h2>
+            <Form className="form">
+              <h2>Register</h2>
               <hr></hr>
               <div className="firstname">
                 <CustomInput
@@ -88,7 +88,6 @@ export default function LogIn() {
                   placeholder="Enter your first name"
                 />
               </div>
-              <br></br>
               <div className="lastname">
                 <CustomInput
                   label="Last name"
@@ -97,7 +96,6 @@ export default function LogIn() {
                   placeholder="Enter your last name"
                 />
               </div>
-              <br></br>
               <div className="password">
                 <CustomInput
                   label="Password"
@@ -106,7 +104,6 @@ export default function LogIn() {
                   placeholder="Enter your password"
                 />
               </div>
-              <br></br>
               <div className="confirm">
                 <CustomInput
                   label="Confirm password"
@@ -115,7 +112,6 @@ export default function LogIn() {
                   placeholder="Enter your confirmpassword"
                 />
               </div>
-              <br></br>
               <div className="payment">
                 <CustomSelect
                   label="Payment & Purchase"
@@ -130,11 +126,9 @@ export default function LogIn() {
                   <option value="invest">Invest</option>
                 </CustomSelect>
               </div>
-              <br></br>
-              <div className="ckeckbox">
+              <div className="checkbox">
                 <CustomCheckBox name="acceptedTos" type="checkbox" />
               </div>
-              <br></br>
               <hr></hr>
               <button type="submit" disabled={isSubmitting} className="btn">
                 Log in

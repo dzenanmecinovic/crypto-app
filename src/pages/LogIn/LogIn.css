@@ -3,20 +3,20 @@
   margin-bottom: -40px;
   width: 100%;
   background-color: orange;
-  height: 140vh;
+  height: 110vh;
 }
 
 .row {
-  width: 90vh;
+  width: 60vh;
   background-color: rgb(235, 235, 235);
-  min-height: 700px;
-  margin: auto;
-  position: relative;
-  bottom: 450px;
-  left: 300px;
-  padding: 20px;
-  margin-bottom: 100px;
-  border-radius: 60px;
+  position: absolute;
+  height: 80vh;
+  left: 60%;
+  bottom: 4%;
+  font-size: 15px;
+}
+.form {
+  text-align: center;
 }
 
 .btn {
@@ -25,13 +25,27 @@
   border: none;
   border-radius: 3px;
   width: 20%;
-  padding: 1rem 0.5rem;
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 900;
   cursor: pointer;
-  margin-left: 230px;
+}
+.password {
+  position: relative;
+  left: 5px;
 }
 
+.checkbox {
+  position: relative;
+  left: -40px;
+}
+.confirm {
+  position: relative;
+  left: -25px;
+}
+.payment {
+  position: relative;
+  left: -70px;
+}
 input.input-error,
 select.input-error {
   border-color: red;
