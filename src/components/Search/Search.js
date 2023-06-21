@@ -1,6 +1,7 @@
 import {
   Container,
   InputAdornment,
+  Pagination,
   Paper,
   Table,
   TableBody,
@@ -17,11 +18,21 @@ import { useNavigate } from "react-router-dom";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { Sparklines, SparklinesLine } from "react-sparklines";
 import { AppContext } from "../../context/AppContext";
+import "./Search.css";
 
 export default function Search() {
   const { data, setData } = useContext(AppContext);
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
+  const [page, setPage] = useState(1);
+  const handleChange = (event, value) => {
+    setPage(value);
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
+  const coinsPerPage = 10;
+  const numOfPages = Math.ceil(
+    data.filter((coin) => coin.length / coinsPerPage)
+  );
 
   const fetchData = async () => {
     const options = {
@@ -33,7 +44,7 @@ export default function Search() {
         "tiers[0]": "1",
         orderBy: "marketCap",
         orderDirection: "desc",
-        limit: "20",
+        // limit: "20",
         offset: "0",
       },
       headers: {
@@ -86,7 +97,6 @@ export default function Search() {
           />
         </Container>
       )}
-
       <TableContainer component={Paper} sx={{ width: "700px" }}>
         <Table aria-label="simple table">
           <TableHead>
@@ -148,10 +158,20 @@ export default function Search() {
                     </button>
                   </TableCell>
                 </TableRow>
-              ))}
+              ))
+              .slice((page - 1) * coinsPerPage, page * coinsPerPage)}
           </TableBody>
         </Table>
       </TableContainer>
+      <div className="pagination">
+        <Pagination
+          count={coinsPerPage}
+          page={page}
+          onChange={handleChange}
+          size="large"
+          color="error"
+        />
+      </div>
     </>
   );
 }
