@@ -1,12 +1,10 @@
-.pricesMain {
-  min-height: 100vh;
+#pricesMain {
+  margin-left: 26%;
 }
 
 .pricesPage {
   width: 100vw;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
   padding-top: 10%;
   padding-bottom: 5%;
 }
