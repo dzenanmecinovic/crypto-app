@@ -3,27 +3,12 @@
   margin-bottom: -40px;
   width: 100%;
   background-color: orange;
-  height: 140vh;
-  width: 100%;
-  background-color: orange;
-  margin-bottom: -500px;
-  margin-top: -40px;
-  min-height: 1000px;
   height: 110vh;
 }
 
 .row {
   width: 60vh;
   background-color: rgb(235, 235, 235);
-  min-height: 700px;
-  margin: auto;
-  position: relative;
-  bottom: 450px;
-  left: 300px;
-  padding: 20px;
-  margin-bottom: 100px;
-  border-radius: 60px;
-  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
   position: absolute;
   height: 80vh;
   left: 60%;
@@ -64,6 +49,10 @@
 input.input-error,
 select.input-error {
   border-color: red;
+}
+
+.btn:disabled {
+  opacity: 0.35;
 }
 
 .uvod {
