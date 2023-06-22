@@ -7,8 +7,6 @@ import CustomSelect from "./CustomSelect";
 import CustomCheckBox from "./CustomCheckBox";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import buySell from "../../assets/buy-sell-removebg-preview.png";
-import Button from "@mui/material/Button";
-import Stack from "@mui/material/Stack";
 
 const onSubmit = async (values, actions) => {
   console.log(values);
@@ -39,7 +37,7 @@ export default function LogIn() {
           textDecoration: "underline",
         }}
       >
-        Buy&Donate.org CryptoApp
+        Buy&Donate.orgCryptoApp
       </h1>
       <div className="uvod">
         <h1 style={{ fontSize: "3rem" }}>Grow your non-cash revenue.</h1>
@@ -78,16 +76,18 @@ export default function LogIn() {
           validationSchema={basicSchema}
           onSubmit={onSubmit}
         >
-          {({ values }) => (
-            <Form>
-              <h2 style={{ marginLeft: "20px" }}>Register</h2>
+          {({ isSubmitting, values }) => (
+            <Form className="form">
+              <h2>Register</h2>
               <hr></hr>
-              <CustomInput
-                label="First name"
-                name="firstname"
-                type="text"
-                placeholder="Enter your first name"
-              />
+              <div className="firstname">
+                <CustomInput
+                  label="First name"
+                  name="firstname"
+                  type="text"
+                  placeholder="Enter your first name"
+                />
+              </div>
               <div className="lastname">
                 <CustomInput
                   label="Last name"
@@ -113,7 +113,12 @@ export default function LogIn() {
                 />
               </div>
               <div className="payment">
-                <CustomSelect label="Payment" name="paymentpurchase">
+                <CustomSelect
+                  label="Payment & Purchase"
+                  name="paymentpurchase"
+                  placeholder="Please select a type"
+                >
+                  <option values="">Please select a type</option>
                   <option value="buy">Buy</option>
                   <option value="donate">Donate</option>
                   <option value="sell">Sell</option>
@@ -125,15 +130,9 @@ export default function LogIn() {
                 <CustomCheckBox name="acceptedTos" type="checkbox" />
               </div>
               <hr></hr>
-              <Stack direction="row" spacing={2}>
-                <Button
-                  variant="contained"
-                  type="submit"
-                  sx={{ alignSelf: "center" }}
-                >
-                  Log in
-                </Button>
-              </Stack>
+              <button type="submit" disabled={isSubmitting} className="btn">
+                Log in
+              </button>
             </Form>
           )}
         </Formik>
