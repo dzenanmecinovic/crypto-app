@@ -163,6 +163,20 @@ const HomePage = () => {
               asked. Take adventage of fully-customizable fees for sending.
               Create unlimited wallets to support your privacy.
             </p>
+            <a href={"/login"}>
+              <ColorButton
+                variant="primary"
+                sx={{
+                  padding: "20px",
+                  width: "200px",
+                  borderRadius: "60px",
+                  marginLeft: "130px",
+                  marginTop: "30px",
+                }}
+              >
+                Log In
+              </ColorButton>
+            </a>
           </div>
         </div>
       </div>
