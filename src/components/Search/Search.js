@@ -109,7 +109,7 @@ export default function Search() {
               <TableCell align="right">Price</TableCell>
               <TableCell align="right">Market Cap</TableCell>
               <TableCell align="right">7 days</TableCell>
-              <TableCell align="right">Fav</TableCell>
+              {/* <TableCell align="right">Fav</TableCell> */}
             </TableRow>
           </TableHead>
           <TableBody>
@@ -148,7 +148,7 @@ export default function Search() {
                       />
                     </Sparklines>
                   </TableCell>
-                  <TableCell align="right">
+                  {/* <TableCell align="right">
                     <button
                       style={{ border: "none", backgroundColor: "white" }}
                     >
@@ -156,7 +156,7 @@ export default function Search() {
                         style={{ color: "red" }}
                       ></FavoriteBorderIcon>
                     </button>
-                  </TableCell>
+                  </TableCell> */}
                 </TableRow>
               ))
               .slice((page - 1) * coinsPerPage, page * coinsPerPage)}
