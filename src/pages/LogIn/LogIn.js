@@ -7,6 +7,7 @@ import CustomSelect from "./CustomSelect";
 import CustomCheckBox from "./CustomCheckBox";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import buySell from "../../assets/buy-sell-removebg-preview.png";
+import { width } from "@mui/system";
 
 const onSubmit = async (values, actions) => {
   console.log(values);
@@ -18,49 +19,51 @@ const onSubmit = async (values, actions) => {
 export default function LogIn() {
   return (
     <div className="body">
-      <div className="buySell">
-        <img
-          src={buySell}
-          alt="img1"
+      <div style={{ width: "40vw" }}>
+        <div className="buySell">
+          <img
+            src={buySell}
+            alt="img1"
+            style={{
+              transform: "rotate(45deg)",
+              zIndex: "-1",
+              marginTop: "100px",
+            }}
+          ></img>
+        </div>
+        <h1
           style={{
-            transform: "rotate(45deg)",
-            zIndex: "-1",
-            marginTop: "100px",
+            margin: "40px",
+            padding: "30px",
+            color: "midnightblue",
+            textDecoration: "underline",
           }}
-        ></img>
-      </div>
-      <h1
-        style={{
-          margin: "40px",
-          padding: "30px",
-          color: "midnightblue",
-          textDecoration: "underline",
-        }}
-      >
-        Buy&Donate.orgCryptoApp
-      </h1>
-      <div className="uvod">
-        <h1 style={{ fontSize: "3rem" }}>Grow your non-cash revenue.</h1>
-        <h2>
-          Request a demo to see how The Giving Block can help your nonprofit:
-        </h2>
+        >
+          Buy&Donate.orgCryptoApp
+        </h1>
+        <div className="uvod">
+          <h1 style={{ fontSize: "3rem" }}>Grow your non-cash revenue.</h1>
+          <h2>
+            Request a demo to see how The Giving Block can help your nonprofit:
+          </h2>
 
-        <section>
-          <CheckCircleIcon style={{ paddingRight: "10px" }} />
-          Diversify revenue by accepting crypto and stock donations
-        </section>
-        <section>
-          <CheckCircleIcon style={{ paddingRight: "10px" }} />
-          Engage a new donor demographic with more ways to give
-        </section>
-        <section>
-          <CheckCircleIcon style={{ paddingRight: "10px" }} />
-          Tap into our platform’s giving campaigns and client-only resources
-        </section>
-        <h3>
-          Learn how to integrate crypto and stock donations into your
-          fundraising strategy today.
-        </h3>
+          <section>
+            <CheckCircleIcon style={{ paddingRight: "10px" }} />
+            Diversify revenue by accepting crypto and stock donations
+          </section>
+          <section>
+            <CheckCircleIcon style={{ paddingRight: "10px" }} />
+            Engage a new donor demographic with more ways to give
+          </section>
+          <section>
+            <CheckCircleIcon style={{ paddingRight: "10px" }} />
+            Tap into our platform’s giving campaigns and client-only resources
+          </section>
+          <h3>
+            Learn how to integrate crypto and stock donations into your
+            fundraising strategy today.
+          </h3>
+        </div>
       </div>
       <div className="row">
         <Formik
@@ -82,6 +85,7 @@ export default function LogIn() {
               <hr></hr>
               <div className="firstname">
                 <CustomInput
+                  sx={{ width: 50 }}
                   label="First name"
                   name="firstname"
                   type="text"
@@ -126,7 +130,10 @@ export default function LogIn() {
                   <option value="invest">Invest</option>
                 </CustomSelect>
               </div>
-              <div className="checkbox">
+              <div
+                className="checkbox"
+                style={{ position: "relative", bottom: "50px" }}
+              >
                 <CustomCheckBox name="acceptedTos" type="checkbox" />
               </div>
               <hr></hr>
