@@ -16,6 +16,12 @@ import image6 from "../../assets/money-freely.png";
 
 const HomePage = () => {
   const [alignment, setAlignment] = React.useState("web");
+  const goToSection = () => {
+    window.scrollTo({
+      top: 700,
+      behavior: "smooth",
+    });
+  };
 
   const handleChange = (event, newAlignment) => {
     setAlignment(newAlignment);
@@ -41,9 +47,9 @@ const HomePage = () => {
             </h1>
           </div>
           <div className="homepageContent">
-            <a href="/prices">
-              <button id="getStarted">Get Started</button>
-            </a>
+            <button id="getStarted" onClick={goToSection}>
+              Get Started
+            </button>
           </div>
         </div>
       </div>
