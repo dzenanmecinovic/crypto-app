@@ -37,11 +37,9 @@ export default function PricesPage() {
   };
 
   useEffect(() => {
-    setTimeout(() => {
-      fetchData();
-    }, 500);
-  }, [data]);
-  // console.log(data);
+    fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div id="pricesMain">

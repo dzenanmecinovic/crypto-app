@@ -66,13 +66,6 @@ export default function Navbar() {
         </NavLink>
         <NavLink
           onClick={goToTop}
-          to={"/coins"}
-          style={({ isActive }) => (isActive ? activeStyles : nonActiveStyles)}
-        >
-          <h2 style={{ fontFamily: "Arial" }}>My Coins</h2>
-        </NavLink>
-        <NavLink
-          onClick={goToTop}
           to={"/login"}
           style={({ isActive }) => (isActive ? activeStyles : nonActiveStyles)}
         >
