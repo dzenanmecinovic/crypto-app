@@ -165,7 +165,7 @@ export default function Search() {
       </TableContainer>
       <div className="pagination">
         <Pagination
-          count={coinsPerPage}
+          count={6}
           page={page}
           onChange={handleChange}
           size="large"

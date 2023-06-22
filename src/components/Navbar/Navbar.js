@@ -5,6 +5,12 @@ import logo from "../../assets/btcoinlogo-removebg-preview.png";
 
 export default function Navbar() {
   const [navbar, setNavbar] = useState(false);
+  const goToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   const activeStyles = {
     color: "#fff",
@@ -48,22 +54,25 @@ export default function Navbar() {
   return (
     <>
       <header className={navbar ? "active" : "navbar"}>
-        <NavLink to={"/"}>
+        <NavLink to={"/"} onClick={goToTop}>
           <img src={logo} alt="logo" id="logoStyle"></img>
         </NavLink>
         <NavLink
+          onClick={goToTop}
           to={"/prices"}
           style={({ isActive }) => (isActive ? activeStyles : nonActiveStyles)}
         >
           <h2 style={{ fontFamily: "Arial" }}>Prices</h2>
         </NavLink>
         <NavLink
+          onClick={goToTop}
           to={"/coins"}
           style={({ isActive }) => (isActive ? activeStyles : nonActiveStyles)}
         >
           <h2 style={{ fontFamily: "Arial" }}>My Coins</h2>
         </NavLink>
         <NavLink
+          onClick={goToTop}
           to={"/login"}
           style={({ isActive }) => (isActive ? activeStyles : nonActiveStyles)}
         >
