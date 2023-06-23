@@ -35,11 +35,10 @@ export default function LogIn() {
           style={{
             margin: "40px",
             padding: "30px",
-            color: "midnightblue",
-            textDecoration: "underline",
+            color: "#252525",
           }}
         >
-          Buy&Donate.orgCryptoApp
+          Buy & Donate - CryptoApp
         </h1>
         <div className="uvod">
           <h1 style={{ fontSize: "3rem" }}>Grow your non-cash revenue.</h1>
