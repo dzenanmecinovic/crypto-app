@@ -1,0 +1,15 @@
+.teamPage {
+  height: 100vh;
+  width: 100vw;
+  background: url(../../assets/pixelscott.jpg);
+  background-size: contain;
+}
+
+.teamPagePosition {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  padding-top: 15vh;
+  padding-left: 0.5vw;
+  gap: 20px;
+}

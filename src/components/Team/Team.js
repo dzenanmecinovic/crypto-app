@@ -1,13 +1,15 @@
 import React from "react";
 import "./Team.css";
-import team from "../../team.json";
 
-export default function Team() {
+export default function Team({ imageURL, name, location, description }) {
   return (
     <div className="teamDiv">
-      {team.map((person) => {
-        <h1>{person.name}</h1>;
-      })}
+      <div className="teamCard">
+        <img src={imageURL} alt="userPfp"></img>
+        <h2>{name}</h2>
+        <p>{location}</p>
+        <p>{description}</p>
+      </div>
     </div>
   );
 }

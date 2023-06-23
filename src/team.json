@@ -3,18 +3,21 @@
     "id": 1,
     "imageURL": "https://avatars.githubusercontent.com/u/111905617?v=4",
     "name": "Dzenan Mecinovic",
-    "description": "Dzenan is a rising Front-end Web developer."
+    "description": "Dzenan is a rising Front-end Web developer.",
+    "location": "Novi Pazar, Serbia"
   },
   {
     "id": 2,
-    "imageURL": "",
+    "imageURL": "https://avatars.githubusercontent.com/u/111905617?v=4",
     "name": "Mitar Vranic",
-    "description": "Mitar is a young motivated Web developer."
+    "description": "Mitar is a young motivated Web developer.",
+    "location": "Novi Pazar, Serbia"
   },
   {
     "id": 3,
-    "imageURL": "",
+    "imageURL": "https://avatars.githubusercontent.com/u/111905617?v=4",
     "name": "Miona Vranic",
-    "description": "Miona is web developer and chemistry student."
+    "description": "Miona is web developer and chemistry student.",
+    "location": "Novi Pazar, Serbia"
   }
 ]

@@ -1,0 +1,22 @@
+.teamDiv {
+  height: 100vh;
+  width: 100vw;
+}
+
+.teamCard {
+  text-align: center;
+  border: 1px solid black;
+  margin: 1.5rem;
+  padding: 1rem;
+  border-radius: 50px;
+  transition: all 0.5s;
+}
+
+.teamCard:hover {
+  background-color: rgb(241, 241, 241);
+}
+
+.teamCard img {
+  height: 35vh;
+  mix-blend-mode: multiply;
+}
