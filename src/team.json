@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "imageURL": "https://avatars.githubusercontent.com/u/111905617?v=4",
+    "name": "Dzenan Mecinovic",
+    "description": "Dzenan is a rising Front-end Web developer."
+  },
+  {
+    "id": 2,
+    "imageURL": "",
+    "name": "Mitar Vranic",
+    "description": "Mitar is a young motivated Web developer."
+  },
+  {
+    "id": 3,
+    "imageURL": "",
+    "name": "Miona Vranic",
+    "description": "Miona is web developer and chemistry student."
+  }
+]

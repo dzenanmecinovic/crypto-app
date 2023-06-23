@@ -16,8 +16,9 @@ header {
   background-color: #061121;
 }
 header h2 {
-  color: white;
+  /* color: white; */
   font-size: 18px;
+  height: 2vh;
 }
 #logoStyle {
   width: 5.5vw;

@@ -13,7 +13,10 @@ export default function Navbar() {
   };
 
   const activeStyles = {
-    color: "#fff",
+    color: "black",
+    backgroundColor: "white",
+    borderRadius: "50px",
+    padding: ".3rem",
     textDecoration: "none",
   };
   const nonActiveStyles = {
@@ -63,6 +66,13 @@ export default function Navbar() {
           style={({ isActive }) => (isActive ? activeStyles : nonActiveStyles)}
         >
           <h2 style={{ fontFamily: "Arial" }}>Prices</h2>
+        </NavLink>
+        <NavLink
+          onClick={goToTop}
+          to={"/team"}
+          style={({ isActive }) => (isActive ? activeStyles : nonActiveStyles)}
+        >
+          <h2>Team</h2>
         </NavLink>
         <NavLink
           onClick={goToTop}

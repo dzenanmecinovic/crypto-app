@@ -7,6 +7,7 @@ import Footer from "./components/Footer/Footer";
 import LogIn from "./pages/LogIn/LogIn";
 import Layout from "./components/Layout/Layout";
 import SCoin from "./pages/PricesPage/SingleCoin/SCoin";
+import Team from "./components/Team/Team";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         </Route>
         <Route path="/prices/:uuid" element={<SCoin />}></Route>
         <Route path="/login" element={<LogIn />}></Route>
+        <Route path="/team" element={<Team />}></Route>
       </Routes>
       <Footer />
     </div>
