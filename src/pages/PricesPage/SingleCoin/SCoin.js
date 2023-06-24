@@ -7,7 +7,7 @@ export default function SCoin() {
   const { data } = useContext(AppContext);
   const { uuid } = useParams();
   const scoin = data.find((e) => {
-    return (e.uuid = uuid);
+    return e.uuid == uuid;
   });
   return (
     <div>

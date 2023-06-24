@@ -33,6 +33,12 @@ export default function Search() {
   const numOfPages = Math.ceil(
     data.filter((coin) => coin.length / coinsPerPage)
   );
+  const goToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   const fetchData = async () => {
     const options = {
@@ -119,7 +125,7 @@ export default function Search() {
                 <TableRow
                   key={coin.uuid}
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-                  onClick={() => navigate(`/prices/${coin.uuid}`)}
+                  onClick={() => goToTop(navigate(`/prices/${coin.uuid}`))}
                 >
                   <TableCell align="right">{coin.rank}</TableCell>
                   <TableCell component="th" scope="row">
