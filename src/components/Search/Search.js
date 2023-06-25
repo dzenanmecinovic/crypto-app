@@ -15,7 +15,6 @@ import SearchIcon from "@mui/icons-material/Search";
 import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { Sparklines, SparklinesLine } from "react-sparklines";
 import { AppContext } from "../../context/AppContext";
 import "./Search.css";
@@ -171,7 +170,7 @@ export default function Search() {
       </TableContainer>
       <div className="pagination">
         <Pagination
-          count={6}
+          count={5}
           page={page}
           onChange={handleChange}
           size="large"
