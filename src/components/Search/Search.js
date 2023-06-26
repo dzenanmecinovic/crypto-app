@@ -79,10 +79,8 @@ export default function Search() {
     if (favCoins.includes(coin)) {
       const filteredArray = favCoins.filter((el) => el.uuid !== coin.uuid);
       setFavCoins(filteredArray);
-      Toast.error("Coin removed from favorites!");
     } else {
       setFavCoins([...favCoins, coin]);
-      Toast.success("Coin successfully added to favorites!");
     }
   };
   return (
@@ -138,13 +136,21 @@ export default function Search() {
                 <TableRow
                   key={coin.uuid}
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-                  // onClick={() => goToTop(navigate(`/prices/${coin.uuid}`))}
                 >
                   <TableCell align="right">{coin.rank}</TableCell>
                   <TableCell component="th" scope="row">
-                    <img src={coin.iconUrl} style={{ width: 25 }}></img>
+                    <img
+                      src={coin.iconUrl}
+                      style={{ width: 25 }}
+                      onClick={() => goToTop(navigate(`/prices/${coin.uuid}`))}
+                    ></img>
                   </TableCell>
-                  <TableCell align="right">{coin.name}</TableCell>
+                  <TableCell
+                    align="right"
+                    onClick={() => goToTop(navigate(`/prices/${coin.uuid}`))}
+                  >
+                    {coin.name}
+                  </TableCell>
                   <TableCell align="right">
                     ${Number(coin.price).toLocaleString()}
                   </TableCell>
@@ -170,14 +176,17 @@ export default function Search() {
                   <TableCell align="right">
                     <button
                       style={{
-                        border: "none",
-                        backgroundColor: "#252525",
+                        border: "1px solid #252525",
+                        borderRadius: "50px",
+                        padding: ".3rem",
+                        backgroundColor: "white",
                         color: "white",
                         cursor: "pointer",
+                        width: "3rem",
                       }}
                       onClick={() => addFavoriteCoin(coin)}
                     >
-                      Favorite
+                      💖
                     </button>
                   </TableCell>
                 </TableRow>
