@@ -140,12 +140,14 @@ export default function Search() {
                   <TableCell align="right">{coin.rank}</TableCell>
                   <TableCell component="th" scope="row">
                     <img
+                      id="img"
                       src={coin.iconUrl}
                       style={{ width: 25 }}
                       onClick={() => goToTop(navigate(`/prices/${coin.uuid}`))}
                     ></img>
                   </TableCell>
                   <TableCell
+                    id="text"
                     align="right"
                     onClick={() => goToTop(navigate(`/prices/${coin.uuid}`))}
                   >
