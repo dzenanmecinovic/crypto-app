@@ -1,7 +1,7 @@
 .body {
   width: 100%;
   background-color: orange;
-  height: 110vh;
+  height: 95vh;
   display: flex;
   justify-content: space-between;
 }
@@ -10,7 +10,7 @@
   width: 30vw;
   background-color: rgb(235, 235, 235);
   position: absolute;
-  height: 80vh;
+  height: 65vh;
   left: 60%;
   top: 15%;
   font-size: 15px;
