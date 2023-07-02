@@ -30,15 +30,16 @@ export default function PricesPage() {
     try {
       const response = await axios.request(options);
       setData(response.data.data.coins);
-      console.log(response.data.data);
     } catch (error) {
       console.error(error);
     }
   };
 
   useEffect(() => {
-    fetchData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    setInterval(() => {
+      fetchData();
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, 2000);
   }, []);
 
   return (
